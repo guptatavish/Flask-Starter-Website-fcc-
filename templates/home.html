@@ -11,32 +11,59 @@
       height: 400px;
       
       
+    .mt-0 {
+  margin-top: 0 !important;
     }
+
+    .ms-1 {
+  margin-left: ($spacer * .25) !important;
+    }
+
+    .px-2 {
+  padding-left: ($spacer * .5) !important;
+  padding-right: ($spacer * .5) !important;
+    }
+
+    .p-3 {
+  padding: $spacer !important;
+    }
+    
   </style>
 
   </head>
   <body>
-    <div class="container">
+    {% include 'nav.html' %}
+    <center><img  id ="banner" class='img-fluid'
+   src="/static/pic3.avif" height = '320'></center>
+  <div class="container ">
     <h1 class="text-center mt-4 mb-4">Aspiring BackHand Engineers!</h1>
     <h2 class="text-center mb-4">We Sometimes code ;)</h2>
-    <center><img  id ="banner" class='img-fluid'
-   src="https://p1website.guptatavish.repl.co/static/techbios1.jpeg" height = '320'></center>
-    <h2 class="text-center mt-4 mb-2"> About Us</h2>
-    <p class='lead' >
+    
+    <h2 class="text-center mt-4 mb-4"> About Us</h2>
+  <div class="row" style="margin-bottom :4px;">
+    <div class="col-6">
+       <p class='lead' >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Donec adipiscing tristique risus nec. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Dui ut ornare lectus sit. Eget egestas purus viverra accumsan in nisl. Eget arcu dictum varius duis at. Viverra justo nec ultrices dui sapien eget mi. Nunc id cursus metus aliquam eleifend mi in. Est sit amet facilisis magna etiam tempor orci. Augue interdum velit euismod in pellentesque massa placerat duis. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Leo urna molestie at elementum eu.
-    </p>
+       </p>
+    </div>
+    <div class="col-6">
+      <img class ="img-fluid" src="/static/pic4.avif" style="height : 320px;border-radius:4px;">
+    </div>
+  </div>
+  </div>
     <h2 class = "text-center">Let's Work Together!</h2>
-    <p >
+    <p>
       <div style="margin-bottom : 40px;"> 
       {% for job in jobs %}}
         {% include 'jobs.html' %}
       {% endfor %}
-      </div>s
+      </div>
     </p>
       
     <div style="text-align:center">
-    <button class="btn btn-outline-info" class="btn btn-primary btn-lg">Connect with us !</button>
-      <p class="mt-4"> Copyright Tavish Gupta 2023</p>
+    <a  href ="mailto:tavishgupta9@gmail.com?subject=Query%20regarding%20the%20Job%20Openings&body=Hi%2C%20My%20name%20is%20%3A%0D%0A%0D%0AMy%20Question%20is%20%3A" class="btn btn-outline-info" class="btn btn-primary btn-lg">Ask a Query !</a>
+     
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
