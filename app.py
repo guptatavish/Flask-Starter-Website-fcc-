@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify
+from database
 
 app = Flask(__name__)
 JOBS = [
@@ -28,6 +29,20 @@ JOBS = [
     },
 ]
 
+def load_jobs_from_db():
+  with engine.connect() as conn:
+  alldatalist=[]
+  tableheads=['id','title','location','salary','currency','resbi','requi']
+  result=conn.execute(text("select * from jobs"))
+  results_dict=[]
+  for row in result.all():
+    l1=[]
+    l1.append(row)
+    a1=zip(tableheads,l1)
+    
+
+  print(results_dict)
+  
 
 @app.route("/")
 def hello_world():
